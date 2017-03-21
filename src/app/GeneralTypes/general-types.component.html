@@ -1,0 +1,16 @@
+<h2> {{title}} </h2>
+
+<ul class="heroes">
+<li *ngFor = " let generalType of generalTypes"  
+[class.selected]= "generalType === selectedGeneralType" 
+(click)="onSelect(generalType)" >
+<span class="badge"> {{generalType.id}}</span>  {{generalType.name_fr}} 
+</li>
+</ul>
+<div *ngIf="selectedGeneralType">
+        <h2>
+        {{selectedGeneralType.name_fr | uppercase}} selected ! 
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+</div>
+

@@ -1,0 +1,11 @@
+<div *ngIf="general-type">
+    <h2> {{ general-type.id}} details  </h2>
+
+        <div><label>id: </label>{{general-type.id}}</div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="general-type.name_fr" placeholder="name"/>
+        </div>
+
+   <button (click)= "goBack()" > Back </button> 
+</div>

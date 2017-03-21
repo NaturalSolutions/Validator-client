@@ -1,20 +1,94 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {FormsModule}  from '@angular/forms';
+import {RouterModule} from '@angular/router'; 
+import {AppRoutingModule} from './app-routing.module';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
-import { AppComponent } from './app.component';
+
+
+//Poi 
+
+import {PoiService } from './Poi/poi.service';
+import {PoiDetailComponent} from './Poi/poi-detail.component';
+import {PoisComponent} from './Poi/pois.component';
+
+//User
+
+import {UserService} from './User/user.service';
+import {UserDetailComponent} from './User/user-detail.component';
+import {UsersComponent} from './User/users.component';
+
+
+//Types 
+
+import {TypeService} from './Types/type.service';
+import {TypeDetailComponent} from './Types/type-detail.component';
+import {TypesComponent} from './Types/types.component';
+import {TypeMenuComponent} from './Types/type-menu.component';
+
+//Periodes 
+
+import {PeriodeService} from './Periodes/periode.service';
+import {PeriodeDetailComponent} from './Periodes/periode-detail.component';
+import {PeriodesComponent} from './Periodes/periodes.component'; 
+
+
+//GeneralTypes
+
+import {GeneralTypeService} from './GeneralTypes/general-type.service';
+import {GeneralTypeDetailComponent} from './GeneralTypes/general-type-detail.component';
+import {GeneralTypesComponent} from './GeneralTypes/general-types.component'; 
+
+
+//Badges
+
+import {BadgeService} from './Badge/badge.service';
+import {BadgeDetailComponent} from './Badge/Badge-detail.component';
+import {BadgesComponent} from './Badge/Badges.component'; 
+
+
+
+
+
+
+
+
+
+import { AppComponent }  from './app.component';
+import {DashboardComponent} from './Dashboard/dashboard.component'; 
+
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule,
+                  FormsModule,
+                  AppRoutingModule,
+                  MaterialModule
+                ],
+  declarations: [ AppComponent,
+                  DashboardComponent,
+                  PoiDetailComponent,
+                  PoisComponent,
+                  UserDetailComponent,
+                  UsersComponent,
+                  TypeDetailComponent,
+                  TypesComponent,
+                  PeriodeDetailComponent,
+                  PeriodesComponent,
+                  GeneralTypeDetailComponent,
+                  GeneralTypesComponent,
+                  BadgeDetailComponent,
+                  BadgesComponent,
+                  TypeMenuComponent],
+  bootstrap:    [ AppComponent ],
+  providers:    [PoiService,
+                 UserService,
+                 TypeService,
+                 PeriodeService,
+                 GeneralTypeService,
+                 BadgeService ]
 })
 export class AppModule { }

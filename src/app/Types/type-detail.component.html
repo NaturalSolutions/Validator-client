@@ -1,0 +1,14 @@
+<div *ngIf="type">
+    <h2> {{ type.id}} details  </h2>
+
+        <div><label>id: </label>{{type.id}}</div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="type.name_fr" placeholder="name"/>
+        </div>
+
+        <div>   <label> idPeriod : </label>  {{type.idPeriod}}                  </div>
+        <div>   <label> general_type_id : </label>  {{type.general_type_id}}              </div>
+
+   <button (click)= "goBack()" > Back </button> 
+</div>

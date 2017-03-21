@@ -1,0 +1,28 @@
+<h2> {{title}} </h2>
+
+<ul class="heroes">
+<li *ngFor = " let poi of pois"  
+[class.selected]= "poi === selectedPoi" 
+(click)="onSelect(poi)" >
+<span class="badge"> {{poi.id}}</span>  {{poi.name}} 
+<button class="delete"
+  (click)="delete(poi); $event.stopPropagation()"> <md-icon class="delete"> delete</md-icon> </button>
+</li>
+</ul>
+<div *ngIf="selectedPoi">
+        <h2>
+        {{selectedPoi.name | uppercase}} selected ! 
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+</div>
+<div>
+  <label>Poi name:</label> <input #poiName /> 
+  <label>Poi typeId:</label> <input #poiTypeId />
+
+<type-menu> </type-menu>
+
+  <button (click)="add(poiName.value,poiTypeId.value); poiName.value=''; poiTypeId.value=''  ">
+    Add
+  </button>
+</div>
+

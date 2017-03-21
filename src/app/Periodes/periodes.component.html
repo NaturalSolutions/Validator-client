@@ -1,0 +1,16 @@
+<h2> {{title}} </h2>
+
+<ul class="heroes">
+<li *ngFor = " let periode of periodes"  
+[class.selected]= "periode === selectedperiode" 
+(click)="onSelect(periode)" >
+<span class="badge"> {{periode.poi_id}}</span>  {{periode.poi_id}} 
+</li>
+</ul>
+<div *ngIf="selectedPeriode">
+        <h2>
+        {{selectedPeriode.poi_id }} selected ! 
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+</div>
+

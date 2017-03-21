@@ -1,0 +1,15 @@
+<div *ngIf="periode">
+    <h2> {{ periode.name}} details  </h2>
+
+        <div><label>id: </label>{{periode.poi_id}}</div>
+
+        <div>   <label> interval : </label>  {{periode.interval}}       </div>
+        <div>   <label> open_hour : </label>  {{periode.open_hour}}     </div>
+        <div>   <label> close_hour : </label>  {{periode.close_hour}}   </div>
+        <div>   <label> open_date : </label>  {{periode.open_date}}     </div>
+        <div>   <label> close_date : </label>  {{periode.close_date}}   </div>
+
+
+   <button (click)= "goBack()" > Back </button> 
+</div>
+    

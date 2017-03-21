@@ -1,0 +1,14 @@
+<div *ngIf="user">
+    <h2> {{ user.email}} details  </h2>
+
+        <div><label>id: </label>{{user.id}}</div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="user.first_name" placeholder="name"/>
+        </div>
+
+        <div>   <label> role : </label>  {{user.role}}                  </div>
+        <div>   <label> email : </label>  {{user.email}}              </div>
+
+   <button (click)= "goBack()" > Back </button> 
+</div>

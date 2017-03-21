@@ -1,0 +1,16 @@
+<h2> {{title}} </h2>
+
+<ul class="heroes">
+<li *ngFor = " let badge of badges"  
+[class.selected]= "badge === selectedbadge" 
+(click)="onSelect(badge)" >
+<span class="badge"> {{badge.id}}</span>  {{badge.name}} 
+</li>
+</ul>
+<div *ngIf="selectedBadge">
+        <h2>
+        {{selectedBadge.name | uppercase}} selected ! 
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+</div>
+

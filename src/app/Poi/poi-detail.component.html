@@ -1,0 +1,24 @@
+<div *ngIf="poi">
+    <h2> {{ poi.name}} details  </h2>
+
+        <div><label>id: </label>{{poi.id}}</div>
+        <div>
+            <!--input [(ngModel)]="poi.name" placeholder="name" -->
+            <label>name: </label>{{poi.name}}
+        </div>
+
+        <div>   <label> version : </label>  {{poi.version}}                  </div>
+        <div>   <label> longitude : </label>  {{poi.longitude}}              </div>
+        <div>   <label> latitude : </label>  {{poi.latitude}}                </div>
+        <div>   <label> type_id : </label>  {{poi.type_id}}  </div>
+
+   <button (click)= "goBack()" > Back </button>
+
+   <div>
+  <label>Poi name :</label> <input #poiName/>
+  <button (click)="save(poiName.value); poiName.value='' ">
+    Save
+  </button>
+
+</div>
+    
