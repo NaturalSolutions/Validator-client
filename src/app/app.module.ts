@@ -13,6 +13,7 @@ import 'hammerjs';
 import {PoiService } from './Poi/poi.service';
 import {PoiDetailComponent} from './Poi/poi-detail.component';
 import {PoisComponent} from './Poi/pois.component';
+import {PoisFormComponent} from './Poi/poi-form.component';
 
 //User
 
@@ -48,7 +49,9 @@ import {BadgeService} from './Badge/badge.service';
 import {BadgeDetailComponent} from './Badge/Badge-detail.component';
 import {BadgesComponent} from './Badge/Badges.component'; 
 
+//header 
 
+import { HeaderComponent }  from './Pagination/headerProto.component'
 
 
 
@@ -82,13 +85,17 @@ import {DashboardComponent} from './Dashboard/dashboard.component';
                   GeneralTypesComponent,
                   BadgeDetailComponent,
                   BadgesComponent,
-                  TypeMenuComponent],
+                  TypeMenuComponent,
+                  PoisFormComponent,
+                  HeaderComponent],
   bootstrap:    [ AppComponent ],
   providers:    [PoiService,
                  UserService,
                  TypeService,
                  PeriodeService,
                  GeneralTypeService,
-                 BadgeService ]
+                 BadgeService,
+                 PoisComponent,
+                 TypeMenuComponent ]
 })
 export class AppModule { }

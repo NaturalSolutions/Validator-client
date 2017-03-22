@@ -7,7 +7,8 @@ import {PoisComponent} from './Poi/pois.component';
 @Component ( {
     moduleId : module.id,
     selector : 'application',
-    template:`<h1>{{title}}</h1>
+    template:`
+    <header></header>
     <nav>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/pois">Pois</a>
