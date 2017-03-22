@@ -15,7 +15,14 @@
         </h2>
         <button (click)="gotoDetail()">View Details</button>
 </div>
-<div>
+
+
+
+<button routerLink="/form" md-fab><md-icon>add</md-icon></button>
+<router-outlet> </router-outlet>
+
+
+<!--div>
   <label>Poi name:</label> <input #poiName /> 
   <label>Poi typeId:</label> <input #poiTypeId />
 
@@ -24,5 +31,5 @@
   <button (click)="add(poiName.value,poiTypeId.value); poiName.value=''; poiTypeId.value=''  ">
     Add
   </button>
-</div>
+</div-->
 

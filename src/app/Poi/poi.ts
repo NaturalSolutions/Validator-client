@@ -22,7 +22,7 @@ export interface Poi {
 	street?: string;
 	postal_code?:string;
 	phone?:string;
-	mail?:string;
+	email?:string;
 	website?:string;
 	resa_link?:string;
 	url_img1?:string;
