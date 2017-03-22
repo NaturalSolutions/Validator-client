@@ -8,6 +8,8 @@ import {DashboardComponent} from './Dashboard/dashboard.component';
 //POI
 import {PoiDetailComponent} from './Poi/poi-detail.component';
 import {PoisComponent} from './Poi/pois.component';
+import {PoisFormComponent} from './Poi/poi-form.component';
+
 
 //User
 import {UserDetailComponent} from './User/user-detail.component';
@@ -64,6 +66,8 @@ const routes : Routes = [
 { path : 'generalType/:id', component : GeneralTypeDetailComponent},
 
 { path : 'badge/:id', component : BadgeDetailComponent},
+
+{ path : 'form', component : PoisFormComponent},
 
 
 ];
