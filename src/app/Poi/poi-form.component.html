@@ -1,0 +1,140 @@
+<md-toolbar color="grey">
+  {{title}}
+</md-toolbar>
+
+<form id="Global">
+ <div class="colonneGauche">    
+<div>
+  <md-input-container>
+   <input mdInput placeholder="Poi name" #poiName /> 
+  </md-input-container>
+</div>
+
+<div >
+<type-menu (click)= "callType()"> </type-menu>
+</div>
+
+<div>
+   <md-input-container>
+   <input mdInput placeholder="Poi name_fr" #poiNameFr />
+   </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="longitude"  #Longitude />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="latitude"  #Latitude />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="visit_time_min" #VisitTimeMin />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="visit_time_max" #VisitTimeMax />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="street" #street />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="postal code" #postalCode />
+  </md-input-container>
+</div>
+
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="price min" #priceMin />
+  </md-input-container>
+</div>
+
+</div>  
+
+ <div class="colonneDroite"> 
+
+
+   <div>
+  <md-input-container>
+   <input mdInput placeholder="price max" #priceMax />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="email" #email />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="website" #website />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="resa_link" #resaLink />
+  </md-input-container>
+</div>
+  
+<div>
+  <md-input-container>
+   <input mdInput placeholder="url_img1" #urlImg1 />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="url_img2" #urlImg2 />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="desc" #desc />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="desc_fr" #descFR />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="withchild" #withchild />
+  </md-input-container>
+</div>
+
+<div>
+  <md-input-container>
+   <input mdInput placeholder="phone" #phone />
+  </md-input-container>
+</div>
+
+
+
+ </div>
+
+</form>
+  <button (click)="PoisComponent.add( poiName.value, Longitude.value, Latitude.value, poiNameFr.value, VisitTimeMin.value , VisitTimeMax.value, 	
+  priceMin.value, priceMax.value, street.value, postalCode.value, phone.value, email.value, website.value, resaLink.value, urlImg1.value, urlImg2.value, desc.value,
+   descFR.value,withchild.value) "  routerLink="/pois" routerLinkActive="active" >
+    Envoyer
+  </button>
