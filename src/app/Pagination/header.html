@@ -1,0 +1,39 @@
+<md-toolbar class="header1">
+  
+</md-toolbar>
+<img src="jardin.png">
+<md-toolbar class="header2">
+   <button class="example-icon" ><md-icon>home</md-icon></button>
+  
+
+      <button md-button [mdMenuTriggerFor]="menu"> Exploring Pois </button>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item> Liste </button>
+          <button md-menu-item> Carte </button>
+        </md-menu>
+
+       <button md-button [mdMenuTriggerFor]="menu1"> Contribute </button>
+        <md-menu #menu1="mdMenu">
+          <button md-menu-item> Ajouter un type </button>
+          <button md-menu-item> Faire un don </button>
+        </md-menu>
+
+      <button md-icon-button [mdMenuTriggerFor]="menu2">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu2="mdMenu">
+      <button md-menu-item>
+        <md-icon>library_add</md-icon>
+        <span>Ajout d'un Poi</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>build</md-icon>
+        <span>Modification d'un Poi</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>check_circle</md-icon>
+        <span>Validation d'un poi</span>
+      </button>
+    </md-menu>
+
+</md-toolbar>

@@ -1,0 +1,33 @@
+
+.header1 {
+    top:0px;
+    right:20px;
+    left:20px;
+    background:green;
+    border:1px solid #ccc;
+    padding: 0 10px 0 20px;
+}
+
+ .header2 {
+    top:0px;
+    right:20px;
+    left:20px;
+    background: #eee;
+    border:1px solid #ccc;
+    padding: 0 10px 0 20px;
+}
+.header2 h1 {
+    margin: 0px;
+    padding: opx;
+    font:18px "Plantagenet Cherokee";
+    letter-spacing:2px;
+}
+
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 0.1 0.1 auto;
+}
