@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 
 import {Poi} from './poi' 
 import {PoiDetailComponent} from './poi-detail.component'
+import {TypeMenuComponent} from '../Types/type-menu.component'
 
 import {TYPES} from '../Types/mock-types'
 
@@ -50,33 +51,22 @@ gotoDetail() {
 }
 
 
-transformJsonEnTableau ( pois : Poi [] ) { 
-
-for ( let poi of pois ) {
-  
-  let keyArr = Object.keys(poi) ; 
-  
-  keyArr.forEach( key  => {
-    poi [key] =  poi [key].slice( poi[key].indexOf(":"), -2);
-
-  });
 
 
-}
-    
-return pois ; 
-
-}
-
-add(name: string, typespois_id : number ): void {
+add ( name :   string, longitude    : number , latitude : number , 	name_fr:string,
+	visit_time_min: number , visit_time_max: number ,	price_min: string , price_max: string , street: string, postal_code:string, 
+  phone:string, email:string, website:string, resa_link:string, url_img1:string, url_img2:string, desc:string, desc_fr:string,
+	withchild: boolean ) :  void {
   name.trim(); 
   if (!name) { return; }
-  this.poiService.create(name,typespois_id)
+  this.poiService.create( name, longitude, latitude,  TypeMenuComponent.selectedType, name_fr, visit_time_min , visit_time_max, 	
+  price_min, price_max, street, postal_code, phone, email, website, resa_link, url_img1, url_img2, desc, desc_fr,withchild)
     .then(poi => {
-      this.pois.push(poi);
       this.selectedPoi = null;
     });
 }
+
+// type-id est défini en "dur" dans add() 
 
 delete(poi: Poi): void {
   this.poiService
@@ -93,15 +83,23 @@ getPoiType ( nom : string ) {
 TYPES.forEach(element => {
   if ( nom === element.name_fr )
       return element.id ;  
-
-
-});
-  
-
-
+  });
 }
 
+transformJsonEnTableau ( pois : Poi [] ) {    // pour le json de jsons .. 
 
+  for ( let poi of pois ) {
+    
+     let keyArr = Object.keys(poi) ; 
+    
+      keyArr.forEach( key  => {
+        poi [key] =  poi [key].slice( poi[key].indexOf(":"), -2);
+      });
+  }
+      
+  return pois ; 
+
+}
 
 
 
