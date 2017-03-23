@@ -2,139 +2,130 @@
   {{title}}
 </md-toolbar>
 
-<form id="Global">
- <div class="colonneGauche">    
-<div>
-  <md-input-container>
-   <input mdInput placeholder="Poi name" #poiName /> 
-  </md-input-container>
-</div>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Name" [(ngModel)]="poi.name" name="name" />
+    </md-input-container>
+  </div>
 
-<div >
-<type-menu (click)= "callType()"> </type-menu>
-</div>
+  <div>
+    <md-select placeholder="Type" [(ngModel)]="poi.typespois_id" name="typespois_id">
+      <md-option *ngFor=" let type of types" [value]="type.id">
+        {{ type.name_fr }}
+      </md-option>
+    </md-select>
+  </div>
 
-<div>
-   <md-input-container>
-   <input mdInput placeholder="Poi name_fr" #poiNameFr />
-   </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Poi Nom FR" [(ngModel)]="poi.name_fr" name="name_fr" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="longitude"  #Longitude />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="longitude" [(ngModel)]="poi.longitude" name="longitude" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="latitude"  #Latitude />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="latitude" [(ngModel)]="poi.latitude" name="latitude" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="visit_time_min" #VisitTimeMin />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Visit time min" [(ngModel)]="poi.visit_time_min" name="visit_time_min" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="visit_time_max" #VisitTimeMax />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Visit time max" [(ngModel)]="poi.visit_time_max" name="visit_time_max" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="street" #street />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Street" [(ngModel)]="poi.street" name="street" />
+    </md-input-container>
+  </div>
 
-<div>
-  <md-input-container>
-   <input mdInput placeholder="postal code" #postalCode />
-  </md-input-container>
-</div>
-
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="price min" #priceMin />
-  </md-input-container>
-</div>
-
-</div>  
-
- <div class="colonneDroite"> 
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Zip code" [(ngModel)]="poi.postal_code" name="postal_code" />
+    </md-input-container>
+  </div>
 
 
-   <div>
-  <md-input-container>
-   <input mdInput placeholder="price max" #priceMax />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="email" #email />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="website" #website />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="resa_link" #resaLink />
-  </md-input-container>
-</div>
-  
-<div>
-  <md-input-container>
-   <input mdInput placeholder="url_img1" #urlImg1 />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="url_img2" #urlImg2 />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="desc" #desc />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="desc_fr" #descFR />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="withchild" #withchild />
-  </md-input-container>
-</div>
-
-<div>
-  <md-input-container>
-   <input mdInput placeholder="phone" #phone />
-  </md-input-container>
-</div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Price min" [(ngModel)]="poi.price_min" name="price_min" />
+    </md-input-container>
+  </div>
 
 
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Price max" [(ngModel)]="poi.price_max" name="price_max" />
+    </md-input-container>
+  </div>
 
- </div>
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Email" [(ngModel)]="poi.mail" name="mail" />
+    </md-input-container>
+  </div>
 
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Website" [(ngModel)]="poi.website" name="website" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Resa link" [(ngModel)]="poi.resa_link" name="resa_link" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="URL image 1" [(ngModel)]="poi.url_img1" name="url_img1" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="URL image 2" [(ngModel)]="poi.url_img2" name="url_img2" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Description" [(ngModel)]="poi.desc" name="desc" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Description FR" [(ngModel)]="poi.desc_fr" name="desc_fr" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="With child ?" [(ngModel)]="poi.withchild" name="withchild" />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <input mdInput placeholder="Phone" [(ngModel)]="poi.phone" name="phone" />
+    </md-input-container>
+  </div>
+
+  <button type="submit" md-button>Send</button>
 </form>
-  <button (click)="PoisComponent.add( poiName.value, Longitude.value, Latitude.value, poiNameFr.value, VisitTimeMin.value , VisitTimeMax.value, 	
-  priceMin.value, priceMax.value, street.value, postalCode.value, phone.value, email.value, website.value, resaLink.value, urlImg1.value, urlImg2.value, desc.value,
-   descFR.value,withchild.value) "  routerLink="/pois" routerLinkActive="active" >
-    Envoyer
-  </button>
