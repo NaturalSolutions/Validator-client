@@ -75,6 +75,7 @@ const routes : Routes = [
 { path : 'badge/:id', component : BadgeDetailComponent},
 
 { path : 'form', component : PoisFormComponent},
+{ path : 'form/:id', component : PoisFormComponent},
 
 { path: 'login', component: LoginComponent },
 
