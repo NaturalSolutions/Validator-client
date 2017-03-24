@@ -19,8 +19,9 @@ import {PoisComponent} from './Poi/pois.component';
     <a routerLink="/badges">Badges</a>
     <md-slide-toggle>slide</md-slide-toggle>
     </nav>
-    
+    <alert> </alert>
     <router-outlet> </router-outlet>
+    
     `,
     styleUrls : ['app.component.css']
     

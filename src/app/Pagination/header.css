@@ -3,7 +3,7 @@
     top:0px;
     right:20px;
     left:20px;
-    background:green;
+    background: #608c33;
     border:1px solid #ccc;
     padding: 0 10px 0 20px;
 }
@@ -23,6 +23,12 @@
     letter-spacing:2px;
 }
 
+.image2{
+
+    width: 1240px !important;
+    height: 200px !important;
+
+}
 
 .example-icon {
   padding: 0 14px;
@@ -30,4 +36,9 @@
 
 .example-spacer {
   flex: 0.1 0.1 auto;
+}
+
+.registration {
+    margin: 200px;
+
 }

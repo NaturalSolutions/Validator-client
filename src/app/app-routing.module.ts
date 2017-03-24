@@ -37,6 +37,13 @@ import {BadgeDetailComponent} from './Badge/Badge-detail.component';
 import {BadgesComponent} from './Badge/Badges.component'; 
 
 
+//
+import {LoginComponent} from './Registration/login/login.component'
+import {RegisterComponent} from'./Registration/register/register.component'
+
+import {MapComponent} from './Map/googleMap.component'
+
+
 const routes : Routes = [
 
 { path: 'pois', component : PoisComponent},
@@ -69,6 +76,11 @@ const routes : Routes = [
 
 { path : 'form', component : PoisFormComponent},
 
+{ path: 'login', component: LoginComponent },
+
+{ path: 'register', component: RegisterComponent },
+
+{ path: 'map', component: MapComponent },
 
 ];
 

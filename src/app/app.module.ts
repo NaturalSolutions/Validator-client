@@ -1,9 +1,15 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule}  from '@angular/forms';
+
+import { CommonModule } from '@angular/common';
 import {RouterModule} from '@angular/router'; 
 import {AppRoutingModule} from './app-routing.module';
 import { MaterialModule } from '@angular/material';
+
+import { ApplicationRef } from '@angular/core';
+import {FormsModule}  from '@angular/forms';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 import 'hammerjs';
 
 
@@ -65,11 +71,32 @@ import {DashboardComponent} from './Dashboard/dashboard.component';
 
 
 
+
+// used to create fake backend
+import { fakeBackendProvider } from './Registration/_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
+
+
+import { AlertComponent } from './Registration/_directives/index';
+import { AuthGuard } from './Registration/_guards/index';
+import { AlertService, AuthenticationService, UsersService } from './Registration/_services/index';
+import { HomeComponent } from './Registration/home/index';
+import { LoginComponent } from './Registration/login/index';
+import { RegisterComponent } from './Registration/register/index';
+import {MapComponent} from './Map/googleMap.component'
+
+
+
 @NgModule({
   imports:      [ BrowserModule,
                   FormsModule,
                   AppRoutingModule,
-                  MaterialModule
+                  MaterialModule,
+                  FormsModule,
+                  AgmCoreModule.forRoot({
+                    apiKey: 'AIzaSyBW8uRWfGnLkGGUMGZo5BqGE8fgGWoMVtU'
+                  })
                 ],
   declarations: [ AppComponent,
                   DashboardComponent,
@@ -87,7 +114,12 @@ import {DashboardComponent} from './Dashboard/dashboard.component';
                   BadgesComponent,
                   TypeMenuComponent,
                   PoisFormComponent,
-                  HeaderComponent],
+                  HeaderComponent,
+                  AlertComponent,
+                  HomeComponent,
+                  LoginComponent,
+                  RegisterComponent,
+                  MapComponent],
   bootstrap:    [ AppComponent ],
   providers:    [PoiService,
                  UserService,
@@ -96,6 +128,15 @@ import {DashboardComponent} from './Dashboard/dashboard.component';
                  GeneralTypeService,
                  BadgeService,
                  PoisComponent,
-                 TypeMenuComponent ]
+                 TypeMenuComponent,
+                 AuthGuard,
+                 AlertService,
+                 AuthenticationService,
+                 UsersService,
+                 // providers used to create fake backend
+                  /*fakeBackendProvider,
+                  MockBackend,
+                  BaseRequestOptions*/
+                  ]
 })
 export class AppModule { }
