@@ -12,7 +12,7 @@ import {POIS} from '../Poi/mock-pois'
 })
 export class MapComponent {
   title: string = 'Pois sur la carte';
-  pois = POIS ;
+  pois = POIS  ;
  
  // lat: number = 51.678418;
  // lng: number = 7.809007;
@@ -21,14 +21,14 @@ export class MapComponent {
 /*
 constructor ( private poiService : PoiService ) {}
 
-  getPois () : void {
+  getsPois () : void {
 
-this.poiService.getPois().then(pois => this.pois = pois ) ;
+this.poiService.getPois().then(pois => this.pois = pois.slice(1,10) ) ;
 }
 
 
 ngOnInit () {
- this.getPois () ; 
+this.getsPois 
 }
 */
 
