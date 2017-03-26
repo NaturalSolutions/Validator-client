@@ -17,7 +17,7 @@ import {PoisComponent} from './Poi/pois.component';
     <a routerLink="/periodes">Periodes</a>
     <a routerLink="/generalTypes">General Types</a>
     <a routerLink="/badges">Badges</a>
-    <md-slide-toggle>slide</md-slide-toggle>
+     <md-slide-toggle> Carte </md-slide-toggle> 
     </nav>
     <alert> </alert>
     <router-outlet> </router-outlet>

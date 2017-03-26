@@ -4,6 +4,9 @@
 
 <form (ngSubmit)="onSubmit()">
   <div>
+    <md-checkbox [(ngModel)]="poi.validated" name="validated">Validated</md-checkbox>
+  </div>
+  <div>
     <md-input-container>
       <input mdInput placeholder="Name" [(ngModel)]="poi.name" name="name" />
     </md-input-container>

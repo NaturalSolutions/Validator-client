@@ -7,13 +7,13 @@
         <label>name: </label>{{poi.name}}
     </div>
 
-    <div> <label> version : </label> {{poi.version}} </div>
+    <div> <label> description : </label> {{poi.desc}} </div>
     <div> <label> longitude : </label> {{poi.longitude}} </div>
     <div> <label> latitude : </label> {{poi.latitude}} </div>
-    <div> <label> type_id : </label> {{poi.type_id}} </div>
+
 
     <button (click)="goBack()"> Back </button>
 
     <div>
-        <button md-mini-fab (click)="onBtnEditClick()"><md-icon>mode_edit</md-icon></button>
+        <button md-mini-fab (click)="onBtnEditClick()" style=" color : black"><md-icon>mode_edit</md-icon></button>
     </div>
